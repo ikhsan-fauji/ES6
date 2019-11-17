@@ -1,0 +1,29 @@
+<pre>
+  Functions scoped, difference ES6 with ES5.
+  Using ES6 you can simplify your codes
+</pre>
+<script>
+// ES5
+//  only in ES5 with the help of block-scope emulating
+//  function scopes and function expressions
+(function () {
+    var foo1 = function () { return 1 }
+    console.log(foo1()); // 1
+    (function () {
+        var foo1 = function () { return 2 }
+        console.log(foo1()); // 2
+    })();
+    console.log(foo1() === 1); // true
+})();
+
+// ES6
+{
+  function foo2 () { return 1 }
+  console.log(foo2()) // 1
+  {
+    function foo2 () { return 2 }
+    console.log(foo2()) // 2
+  }
+  console.log(foo2() === 1) // true
+}
+</script>
