@@ -1,0 +1,22 @@
+<pre>
+  <code>const</code> or Constants (olso known as "immutable variables") is a variabel which cannot re-assign using new content or value.<br>
+  The value of a constants is defined when a constants is created. <br>
+  Its immutable nature that make value of constants cannot altered, if you altered or re-assign with new value you will getting error message.
+</pre>
+<script>
+  // ES6
+  const PI = 3.141593
+  // PI = 12.7634 // will be getting error message
+  console.log(PI)
+
+  // ES5
+  Object.defineProperty(typeof global === "object" ? global : window, "R", {
+    value: 14.50,
+    enumerable: true,
+    writable: false,
+    configurable: false
+  })
+  //  R = 2 // will not getting error message but the value is not change
+  // the value will change if the configuration of writable is 'true'
+  console.log(R)
+</script>
