@@ -1,0 +1,19 @@
+<p>
+  Template Literals <br>
+  String Interpolation <br>
+  Intuitive expression for single line and multi line. <br>
+  Notice: don't be confused, Template Literals were originally "Template String" in the draft of the EcmaScript 6 language specification. <br>
+  In ES6 you can using backtick (``)
+</p>
+<script>
+  let customer = {name: "Ikhsan Fauji"}
+  let card = {qty: 7, product: "Katana", price: 15}
+  
+  // ES5
+  console.log('Hello ' + customer.name + ', want to buy ' + card.qty + ' '+ card.product + ' for a total of ' + card.price + ' ?')
+  // ES6
+  console.log(
+    `Hello ${customer.name},
+    want to buy ${card.qty} ${card.product} for a total of ${card.price} ?`
+  )
+</script>
