@@ -1,0 +1,14 @@
+<script>
+  let hi = String.raw`Hi\u000A!`
+  let hi2 = String.raw`Hi\n${28 + 12}`
+  let foo = String.raw({
+              raw: ['foo', 'bar', 'baz']
+            }, 2 + 3, 'Java' + 'Script')
+  let raw = String.raw({ raw: 'test' }, 0, 1, 2)
+
+  console.log(hi) // Hi\u000A!
+  console.log(hi2) // Hi\n40
+  console.log(foo) // foo5barJavaScriptbaz
+  console.log(raw) // t0e1s2t
+  
+</script>
