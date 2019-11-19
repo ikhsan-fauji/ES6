@@ -1,0 +1,18 @@
+<script>
+  var nums = [0, 1, 2, 3, 4, 5]
+  // ES5
+  var a = nums.map(function (v) { return v + 1; })
+  var b = nums.map(function (v) { return {even: v, odd: v + 1}; })
+  var c = nums.map(function (v, i) { return v + i; })
+  console.log(a)
+  console.log(b)
+  console.log(c)
+
+  // ES6
+  var d = nums.map((v) => v + 1 )
+  var e = nums.map((v) => ({even: v, odd: v + 1}) )
+  var f = nums.map((v, i) => v + i )
+  console.log(d)
+  console.log(e)
+  console.log(f)
+</script>
