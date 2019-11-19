@@ -1,0 +1,14 @@
+<script>
+  var nums = [1, 2, 3, 4, 5]
+  // ES5
+  nums.forEach(function (v) {
+    if (v % 5 === 0)
+      console.log(v);
+  });
+
+  // ES6
+  nums.forEach((v) => {
+    if (v % 5 === 0)
+      console.log(v)
+  })
+</script>

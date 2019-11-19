@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <title>ES6 Embed Html</title>
+</head>
+<body>
+
+  <label for="">Menus</label>
+  <div id="list-menu"></div>
+  
+</body>
+</html>
+
+<script>
+  // in this case, I want to embed html elements into div with id 'list-menu' with values bellow
+  let menus = [
+    {id: 1, name: 'Burger', price: 5},
+    {id: 2, name: 'Mineral Water', price: 2},
+    {id: 3, name: 'Sate', price: 6}
+  ]
+  // get element by id
+  let div = document.getElementById('list-menu')
+  // create new elements
+  let elements = `<ul>`
+  menus.forEach(data => {
+    elements += `<li>${data.name} - $${data.price}</li>`  
+  })
+  elements += `</ul>`
+  div.innerHTML = elements // embed into div
+
+</script>
