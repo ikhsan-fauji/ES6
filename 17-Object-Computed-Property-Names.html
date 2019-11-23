@@ -1,0 +1,21 @@
+<script>
+  // function to get random number
+  function rand() {
+    return Math.floor(Math.random() * 9);
+  }
+  
+  // ES5
+  var obj1 = {
+    foo: "bar"
+  }
+  obj1['baz' + rand()] = 42
+  console.log(obj1);
+
+  // ES6
+  // Support for computed names in the property definitions
+  let obj2 = {
+    foo: "bar",
+    ['baz' + rand()]: 42
+  }
+  console.log(obj2)
+</script>
